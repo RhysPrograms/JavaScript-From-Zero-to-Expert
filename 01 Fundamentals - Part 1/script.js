@@ -1,6 +1,8 @@
 /* 
+// ******************    //
+// VALUES AND VARIABLES //
+// ******************  //
 
-// Values and Variables
 let js = "amazing";
 console.log(40 + 8 + 23 - 10);
 
@@ -16,7 +18,10 @@ let myCurrentJob = "Teacher";
 
 console.log(myFirstJob);
 
-// Data Types
+// ******************    //
+// DATA TYPES           //
+// ******************  //
+
 let javascriptIsFun = true;
 console.log(javascriptIsFun);
 
@@ -36,7 +41,10 @@ console.log(year);
 console.log(typeof year);
 
 console.log(typeof null); // this will return 'Object', as opposed to 'null' and it is regarded as a Legacy Bug
-*/
+
+// ******************    //
+// LET, CONST AND VAR   //
+// ******************  //
 
 let age = 30;
 age = 31;
@@ -50,4 +58,36 @@ var jobTitle = "Test Specialist"; // before the advent of ES6, var declarations 
 
 lastName = "Schmedtmann"; // Whilst this will work, do NOT write a variable without declaring it
 console.log(lastName);
+*/
 
+// ******************    //
+// BASIC OPERATORS      //
+// ******************  //
+
+// Math Operators
+const now = 2037;
+const ageJonas = now - 1991;
+const ageSarah = now - 2018;
+console.log(ageJonas, ageSarah);
+
+console.log(ageJonas * 2, ageJonas / 10, 2 ** 3); // 2 ** 3 is 2 to the power of three (2 * 2 * 2)
+
+const firstName = "Rhys";
+const lastName = "Atkinson";
+console.log(firstName + " " + lastName);
+
+// Assignment Operators
+let x = 10 + 5; // x = 15
+x += 10; // x = x + 10 = 25
+x += 4; // x = x * 4 = 25 * 4 = 100
+x++; // x = x + 1
+x--; // x = x - 1
+console.log(x);
+
+// Comparison Operators
+console.log(ageJonas > ageSarah); // true
+console.log(ageSarah >= 18); // true
+
+const isFullAge = ageSarah >= 18;
+
+console.log(now - 1991 > now - 2018);
