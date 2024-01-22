@@ -59,7 +59,6 @@ var jobTitle = "Test Specialist"; // before the advent of ES6, var declarations 
 lastName = "Schmedtmann"; // Whilst this will work, do NOT write a variable without declaring it
 console.log(lastName);
 
-
 // ******************    //
 // BASIC OPERATORS      //
 // ******************  //
@@ -91,7 +90,6 @@ console.log(ageSarah >= 18); // true
 const isFullAge = ageSarah >= 18;
 
 console.log(now - 1991 > now - 2018);
-
 
 // ******************    //
 // OPERATOR PRECEDENCE  //
@@ -126,7 +124,7 @@ let BMIJohn = massJohn / (heightMark * heightMark);
 
 console.log(BMIMark, BMIJohn);
 markHigherBMI = BMIMark > BMIJohn;
-*/
+
 
 // ******************              //
 // STRINGS AND TEMPLATE LITERALS  //
@@ -152,3 +150,27 @@ console.log("This is a string with \nmultiple \nlines");
 console.log(`This is a string with
 multiple
 lines`);
+*/
+
+// ************************************     //
+// TAKING DECISIONS: if / else Statements  //
+// ************************************   //
+
+const age = 17;
+
+if (age >= 18) {
+  console.log(`Sarah can have a driving license.`);
+} else {
+  // Else is optional. If there is no else statement, and the conditional outcome is false, JS will not print anything.
+  const yearsLeft = 18 - age;
+  console.log(`Sarah is too young. Wait another ${yearsLeft} years.`);
+}
+
+const birthYear = 1991;
+let century; // Any variable we define within a code block, will not be accessible outside of the block. We must define it outside of the block, and leave it empty.
+
+if (birthYear <= 2000) {
+  let century = 20;
+} else {
+  let century = 21;
+}
