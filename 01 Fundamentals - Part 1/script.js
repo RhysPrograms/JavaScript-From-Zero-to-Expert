@@ -213,7 +213,7 @@ console.log("23" - "10" - 3); // The minus operator triggers the opposite coerci
 
 let n = "1" + 1; // 11
 n = n - 1; // 10
-*/
+
 // ******************                     //
 // TRUTHY AND FALSY OPERATORS            //
 // ******************                   //
@@ -239,3 +239,49 @@ if (height) {
 } else {
   console.log("Height is Undefined"); // false
 }
+*/
+// **********************************     //
+// EQUALITY OPERATORS: == vs. ===        //
+// **********************************   //
+
+// Strict Equality Operator (Always default to the triple operator)
+const age = 18;
+if (age === 18) console.log("You just became an adult (strict)."); // Whenever our if block has just one line, we can omit the curly braces.
+18 === 18; // true
+18 === 19; // false
+
+// Loose Equality Operator (Type Coercion)
+"18" == 18; // true
+
+// Strict Operator
+12 !== 12;
+
+// Loose Operator (Type Coercion)
+12 != 12;
+
+const favouriteNumber = prompt("What's your Favourite Number?");
+console.log(favourite);
+
+if (favouriteNumber == 23) {
+  // '23' == 23
+  console.log("Cool! 23 is an amazing number!"); // WIll Print
+}
+
+if (favouriteNumber === 23) {
+  // '23' === 23
+  console.log("Cool! 23 is an amazing number!"); // WILL not Print
+}
+
+const favourite = Number(prompt("What's your Favourite Number?"));
+// '23' === 23
+if (favourite === 23) {
+  console.log("Cool! 23 is an amazing number!"); // WILL Print as the string has been converted into a Number
+} else if (favourite === 7) {
+  console.log("7 is also a cool number!");
+} else {
+  console.log(
+    "Your number is not 23 or 7, and is therefore, NOT a cool number!"
+  );
+}
+
+if (favourite !== 23) console.log("Why not 23?");
