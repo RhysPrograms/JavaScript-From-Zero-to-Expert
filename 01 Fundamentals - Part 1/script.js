@@ -125,7 +125,6 @@ let BMIJohn = massJohn / (heightMark * heightMark);
 console.log(BMIMark, BMIJohn);
 markHigherBMI = BMIMark > BMIJohn;
 
-
 // ******************              //
 // STRINGS AND TEMPLATE LITERALS  //
 // ******************            //
@@ -151,7 +150,6 @@ console.log(`This is a string with
 multiple
 lines`);
 
-
 // ************************************     //
 // TAKING DECISIONS: if / else Statements  //
 // ************************************   //
@@ -174,7 +172,6 @@ if (birthYear <= 2000) {
 } else {
   let century = 21;
 }
-*/
 
 // ******************    //
 // CHALLENGE #2         //
@@ -193,3 +190,26 @@ if (BMIMark > BMIJohn) {
 } else {
   console.log(`John's BMI ${BMIJohn} is higher than Mark's ${BMIMark}!`);
 }
+*/
+
+// ******************              //
+// TYPE CONVERSION AND COERCION   //
+// ******************            //
+
+// Type Conversion
+const inputYear = "1991";
+
+console.log(Number(inputYear)); // In reference to 'Number', this is a function
+
+console.log(inputYear + 18); // Results in 199118
+console.log(Number(inputYear) + 18); // Results in 2009
+console.log(Number("Jonas")); // Results in NaN (Invalid Number)
+
+console.log(String(23));
+
+// Type Coercion
+console.log("I am" + 23 + " years old"); // The plus operator triggers a coercion (where the number is converted to a string)
+console.log("23" - "10" - 3); // The minus operator triggers the opposite coercion (where the strings are converted to a number)
+
+let n = "1" + 1; // 11
+n = n - 1; // 10
