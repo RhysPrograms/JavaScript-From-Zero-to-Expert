@@ -49,3 +49,12 @@ if (population > 33) {
 } else {
   console.log(`${country}'s population is ${33 = population} million below the average.`);
 }
+
+// Conversion and Coercion
+console.log('9' - '5'); // 4
+console.log('19' - '13' + '17'); // 617
+console.log('19' - '13' + 17); // 23
+console.log('123' < 57); // false
+console.log(5 + 6 + '4' + 9 - 4 - 2); // -> 1143
+// The plus operator triggers a coercion (where the number is converted to a string)
+// The minus operator triggers the opposite coercion (where the strings are converted to a number)
