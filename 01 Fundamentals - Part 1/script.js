@@ -109,13 +109,11 @@ console.log(x, y);
 
 const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge);
-*/
 
 // ******************    //
 // CHALLENGE #1         //
 // ******************  //
 
-/* Write your code below. Good luck! 🙂 */
 // BMI = mass / (height * height);
 
 let massMark = 78;
@@ -128,7 +126,29 @@ let BMIJohn = massJohn / (heightMark * heightMark);
 
 console.log(BMIMark, BMIJohn);
 markHigherBMI = BMIMark > BMIJohn;
+*/
 
 // ******************              //
 // STRINGS AND TEMPLATE LITERALS  //
 // ******************            //
+
+const firstName = "Jonas";
+const job = "Teacher";
+const birthYear = "1991";
+const year = 2037;
+
+const jonas =
+  "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
+console.log(jonas);
+
+const jonasNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`; // Back Ticks Symbol (Above the Tab Key)
+console.log(jonasNew);
+
+console.log(
+  `We can also use backticks for a regular string. Some developers opt for backticks, as opposed to quotation marks due to their multi-function.`
+);
+
+console.log("This is a string with \nmultiple \nlines");
+console.log(`This is a string with
+multiple
+lines`);
