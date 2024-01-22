@@ -58,3 +58,18 @@ console.log('123' < 57); // false
 console.log(5 + 6 + '4' + 9 - 4 - 2); // -> 1143
 // The plus operator triggers a coercion (where the number is converted to a string)
 // The minus operator triggers the opposite coercion (where the strings are converted to a number)
+
+// Equality Operators: == vs. ===
+
+// As we are using the === operator, we must convert our inputted string into a number via the function (Number)
+const numNeighbours = Number(
+  prompt('How many neighbour countries does your country have?')
+);
+
+if (numNeighbours === 1) {
+  console.log('Only 1 border!');
+} else if (numNeighbours > 1) {
+  console.log('More than 1 border');
+} else {
+  console.log('No borders');
+}
