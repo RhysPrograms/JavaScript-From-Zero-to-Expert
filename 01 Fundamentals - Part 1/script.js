@@ -190,7 +190,7 @@ if (BMIMark > BMIJohn) {
 } else {
   console.log(`John's BMI ${BMIJohn} is higher than Mark's ${BMIMark}!`);
 }
-*/
+
 
 // ******************              //
 // TYPE CONVERSION AND COERCION   //
@@ -203,7 +203,7 @@ console.log(Number(inputYear)); // In reference to 'Number', this is a function
 
 console.log(inputYear + 18); // Results in 199118
 console.log(Number(inputYear) + 18); // Results in 2009
-console.log(Number("Jonas")); // Results in NaN (Invalid Number)
+console.log(Number("Jonas")); // Results in NaN (Not a Number (Invalid Number))
 
 console.log(String(23));
 
@@ -213,3 +213,29 @@ console.log("23" - "10" - 3); // The minus operator triggers the opposite coerci
 
 let n = "1" + 1; // 11
 n = n - 1; // 10
+*/
+// ******************                     //
+// TRUTHY AND FALSY OPERATORS            //
+// ******************                   //
+
+// 5 Falsy Values: 0, '', undefined, null, NaN
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean(NaN));
+console.log(Boolean(""));
+console.log(Boolean(null));
+
+const money = 0;
+if (money) {
+  console.log("Don't Spend It All!"); // true
+} else {
+  console.log("You should get a Job!"); // false
+}
+
+let height; // height = undefined
+if (height) {
+  console.log("YAY! Height is defined"); // true
+} else {
+  console.log("Height is Undefined"); // false
+}
