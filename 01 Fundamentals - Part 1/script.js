@@ -91,7 +91,7 @@ console.log(ageSarah >= 18); // true
 const isFullAge = ageSarah >= 18;
 
 console.log(now - 1991 > now - 2018);
-*/
+
 
 // ******************    //
 // OPERATOR PRECEDENCE  //
@@ -109,3 +109,26 @@ console.log(x, y);
 
 const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge);
+*/
+
+// ******************    //
+// CHALLENGE #1         //
+// ******************  //
+
+/* Write your code below. Good luck! 🙂 */
+// BMI = mass / (height * height);
+
+let massMark = 78;
+let heightMark = 1.69;
+let massJohn = 92;
+let heightJohn = 1.95;
+
+let BMIMark = massMark / (heightMark * heightMark);
+let BMIJohn = massJohn / (heightMark * heightMark);
+
+console.log(BMIMark, BMIJohn);
+markHigherBMI = BMIMark > BMIJohn;
+
+// ******************              //
+// STRINGS AND TEMPLATE LITERALS  //
+// ******************            //
