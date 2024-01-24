@@ -285,7 +285,7 @@ if (favourite === 23) {
 }
 
 if (favourite !== 23) console.log("Why not 23?");
-*/
+
 
 // ******************    //
 // LOGICAL OPERATORS    //
@@ -306,4 +306,20 @@ if (hasDriversLicense && hasGoodVision && isTired) {
   console.log("Sarah is able to drive!");
 } else {
   console.log("Someone else should drive!");
+}
+*/
+
+// ******************    //
+// CHALLENGE #3         //
+// ******************  //
+
+const scoreDolphins = (96 + 108 + 89) / 3;
+const scoreKoalas = (88 + 91 + 110) / 3;
+
+if (scoreDolphins > scoreKoalas) {
+  console.log("Dolphins win the trophy");
+} else if (scoreDolphins === scoreKoalas) {
+  consle.log("Both win the trophy");
+} else {
+  console.log("Koalas win the trophy");
 }
