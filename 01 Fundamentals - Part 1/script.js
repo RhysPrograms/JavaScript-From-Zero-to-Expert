@@ -368,7 +368,6 @@ if (day === "Monday") {
 } else {
   console.log("Not a valid day");
 }
-*/
 
 // ******************                    //
 // THE CONDITIONAL (TERNARY) OPERATOR   //
@@ -390,3 +389,45 @@ console.log(drink);
 // }
 
 console.log(`I like to drink ${age >= 18 ? "Wine 🍷" : "Water 🌊"}`);
+*/
+
+// ******************   //
+// CHALLENGE #4         //
+// ******************   //
+
+// Using the Ternary Operator (?)
+const bill2 = 275;
+let tip2;
+
+console.log(
+  `The bill was ${bill2}, the tip was ${(tip2 =
+    bill2 >= 50 && bill2 <= 300
+      ? (tip2 = bill2 * 0.15)
+      : bill2 * 0.2)}, and the total value is ${bill2 + tip2}`
+);
+
+// Using the Ternary Operator (?)
+const bill1 = 275;
+let tip1 = bill1 >= 50 && bill1 <= 300 ? (tip1 = bill1 * 0.15) : bill1 * 0.2;
+
+console.log(
+  `The bill was ${bill1}, the tip was ${tip1}, and the total value is ${
+    bill1 + tip1
+  }`
+);
+
+// If, else if
+const bill3 = 275;
+let tip3;
+
+if ((tip3 = bill3 >= 50 && bill3 <= 300)) {
+  console.log(
+    `The bill was ${bill3}, the tip was ${(tip3 =
+      bill3 * 0.15)}, and the total value is ${bill3 + tip3}`
+  );
+} else {
+  console.log(
+    `The bill was ${bill3}, the tip was ${(tip3 =
+      bill3 * 0.2)}, and the total value is ${bill3 + tip3}`
+  );
+}
