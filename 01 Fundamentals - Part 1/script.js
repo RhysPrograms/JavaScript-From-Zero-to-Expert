@@ -296,7 +296,7 @@ let hasGoodVision = true; // Variable B
 
 console.log(hasDriversLicense && hasGoodVision); // AND
 console.log(hasDriversLicense || hasGoodVision); // OR
-console.log(!hasDriversLicense); // NOT (Changes to false)
+console.log(!hasDriversLicense); // NOT (Changes to false in this instance)
 
 const isTired = true; // Variable C
 

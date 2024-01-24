@@ -1,4 +1,8 @@
-// Values and Variables
+/*
+// ******************       //
+// VALUES AND VARIABLES    //
+// *******************    //
+
 let country = "England";
 let continent = "Europe";
 let population = 70;
@@ -8,7 +12,10 @@ console.log(country);
 console.log(continent);
 console.log(population);
 
-// Data Types
+// ******************    //
+// DATA TYPES    //
+// ******************* //
+
 let isIsland = true;
 let variable;
 
@@ -17,12 +24,18 @@ console.log(typeof population);
 console.log(typeof country);
 console.log(typeof language);
 
-// let, const and var
+// ******************      //
+// LET, CONST, AND VAR    //
+// *******************   //
+
 const country = "England";
 const continent = "Europe";
 const isIsland = true;
 
-// Basic Operators
+// ******************    //
+// BASIC OPERATORS      //
+// ******************* //
+
 console.log(population / 2);
 console.log(population++);
 
@@ -40,17 +53,26 @@ const description =
   language;
 console.log(description);
 
-// Strings and Template Literals
+// ******************                //
+// STRINGS AND TEMPLATE LITERALS    //
+// *******************             //
+
 const description = `${country} is in ${continent}, and its ${population} million people speak ${language}.`;
 
-// Taking Deicisons: if / else Statements
+// ******************                         //
+// TAKING DECISIONS: IF / ELSE STATEMENTS    //
+// *******************                      //
+
 if (population > 33) {
   console.log(`${country}'s population is above average.`);
 } else {
   console.log(`${country}'s population is ${33 = population} million below the average.`);
 }
 
-// Conversion and Coercion
+// ******************          //
+// CONVERSION AND COERCION    //
+// *******************       //
+
 console.log('9' - '5'); // 4
 console.log('19' - '13' + '17'); // 617
 console.log('19' - '13' + 17); // 23
@@ -59,7 +81,9 @@ console.log(5 + 6 + '4' + 9 - 4 - 2); // -> 1143
 // The plus operator triggers a coercion (where the number is converted to a string)
 // The minus operator triggers the opposite coercion (where the strings are converted to a number)
 
-// Equality Operators: == vs. ===
+// ******************               //
+// EQUALITY OPERATORS: == vs. ===  //
+// *******************            //
 
 // As we are using the === operator, we must convert our inputted string into a number via the function (Number)
 const numNeighbours = Number(
@@ -72,4 +96,15 @@ if (numNeighbours === 1) {
   console.log('More than 1 border');
 } else {
   console.log('No borders');
+}
+*/
+
+// ******************     //
+// LOGICAL OPERATORS     //
+// *******************  //
+
+if (speakingLanguage === "English" && population < 50 && !isIsland) {
+  console.log("You should live in England");
+} else {
+  console.log("You should live elsewehre");
 }
