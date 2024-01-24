@@ -323,7 +323,7 @@ if (scoreDolphins > scoreKoalas) {
 } else {
   console.log("Koalas win the trophy");
 }
-*/
+
 
 // ******************            //
 // THE SWITCH STATEMENT         //
@@ -368,3 +368,25 @@ if (day === "Monday") {
 } else {
   console.log("Not a valid day");
 }
+*/
+
+// ******************                    //
+// THE CONDITIONAL (TERNARY) OPERATOR   //
+// ******************                  //
+
+const age = 23;
+age >= 18;
+// ? console.log("I like to drink wine 🍷")
+// : console.log("I like to drink water 🌊");
+
+const drink = age >= 18 ? "Wine 🍷" : "Water 🌊";
+console.log(drink);
+
+// let drink2;
+// if (drink2 >= 18) {
+//   console.log("I like to drink wine 🍷");
+// } else {
+//   console.log("I like to drink water 🌊");
+// }
+
+console.log(`I like to drink ${age >= 18 ? "Wine 🍷" : "Water 🌊"}`);
