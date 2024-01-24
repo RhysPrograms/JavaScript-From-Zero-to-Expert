@@ -307,7 +307,7 @@ if (hasDriversLicense && hasGoodVision && isTired) {
 } else {
   console.log("Someone else should drive!");
 }
-*/
+
 
 // ******************    //
 // CHALLENGE #3         //
@@ -322,4 +322,49 @@ if (scoreDolphins > scoreKoalas) {
   consle.log("Both win the trophy");
 } else {
   console.log("Koalas win the trophy");
+}
+*/
+
+// ******************            //
+// THE SWITCH STATEMENT         //
+// ******************          //
+
+const day = "Monday";
+
+switch (day) {
+  case "Monday": // day === Monday
+    console.log("Plan Course Structure");
+    console.log("Go to Coding Meetup");
+    break;
+  case "Tuesday": // day === Tuesday
+    console.log("Prepare Theory Videos");
+    break;
+  case "Wednesday": // day === Wednesday
+  case "Thursday": // day === Thursday
+    console.log("Write Coding Examples");
+    break;
+  case "Friday": // day === Friday
+    console.log("Record Videos");
+    break;
+  case "Saturday": // day === Saturday
+  case "Sunday": // day === Sundayu
+    console.log("Enjoy the Weekend");
+    break;
+  default: // Basically an Else Block
+    console.log("Not a valid day");
+}
+
+if (day === "Monday") {
+  console.log("Plan Course Structure");
+  console.log("Go to Coding Meetup");
+} else if (day === "Tuesday") {
+  console.log("Prepare Theory Videos");
+} else if (day === "Wednesday" || day === "Thursday") {
+  console.log("Write Coding Examples");
+} else if (day === "Friday") {
+  console.log("Record Videos");
+} else if (day === "Saturday" || "Sunday") {
+  console.log("Enjoy the Weekend");
+} else {
+  console.log("Not a valid day");
 }
