@@ -239,7 +239,7 @@ if (height) {
 } else {
   console.log("Height is Undefined"); // false
 }
-*/
+
 // **********************************     //
 // EQUALITY OPERATORS: == vs. ===        //
 // **********************************   //
@@ -285,3 +285,25 @@ if (favourite === 23) {
 }
 
 if (favourite !== 23) console.log("Why not 23?");
+*/
+
+// ******************    //
+// LOGICAL OPERATORS    //
+// ******************* //
+
+let hasDriversLicense = true; // Variable A
+let hasGoodVision = true; // Variable B
+
+console.log(hasDriversLicense && hasGoodVision); // AND
+console.log(hasDriversLicense || hasGoodVision); // OR
+console.log(!hasDriversLicense); // NOT (Changes to false)
+
+const isTired = true; // Variable C
+
+console.log(hasDriversLicense && hasGoodVision && !isTired);
+
+if (hasDriversLicense && hasGoodVision && isTired) {
+  console.log("Sarah is able to drive!");
+} else {
+  console.log("Someone else should drive!");
+}
