@@ -107,7 +107,7 @@ if (speakingLanguage === "English" && population < 50 && !isIsland) {
 } else {
   console.log("You should live elsewehre");
 }
-*/
+
 
 // ******************        //
 // The switch statement     //
@@ -134,3 +134,19 @@ switch (language) {
   default:
     console.log("Great language too 😊");
 }
+*/
+
+// ******************                      //
+// The Conditional (Ternary) Operator     //
+// *******************                   //
+
+let country = "England's";
+let population = "70";
+
+console.log(
+  `${country} ${
+    population > 33
+      ? "population is above average"
+      : "population is below average"
+  }`
+);
