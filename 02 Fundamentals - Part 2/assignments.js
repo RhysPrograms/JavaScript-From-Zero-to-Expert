@@ -1,4 +1,9 @@
 "use strict";
+
+// ****************    //
+// FUNCTIONS          //
+// ****************  //
+
 /*
 function describeCountry(country, population, capitalCity) {
   const choice = `${country} has ${population} million people and its capital city is ${capitalCity}`;
@@ -14,17 +19,32 @@ console.log(describeCountry("Russia", 147, "Moscow"));
 console.log(describeCountry("China", 1409, "Beijing"));
 */
 
+// ******************                       //
+// FUNCTION DECLARATIONS vs. EXPRESSIONS   //
+// ******************                     //
+
 // Function Declaration
-// const age1 = calcAge1(1991); // We CAN call function declarations prior to them being defined
-function calcAge1(birthYear) {
-  return 2037 - birthYear;
+function percentageOfWorld1(population) {
+  return (population / 7900) * 100;
 }
-const age1 = calcAge1(1991); // We CAN call function declarations prior to them being defined
 
-// Function Expression (Function without a name, or an Anonymous Function)
-const calcAge2 = function (birthYear) {
-  return 2037 - birthYear;
+const england = percentageOfWorld1(57);
+const spain = percentageOfWorld1(48);
+const portugal = percentageOfWorld1(10);
+
+console.log(
+  `"The population of England is ${england}, the population of Spain is ${spain}, and the population of Portugal is ${portugal}.`
+);
+
+// Function Expression
+const percentageOfWorld2 = function (population) {
+  return (population / 7900) * 100;
 };
-const age2 = calcAge2(1991);
 
-console.log(age1, age2);
+const usa = percentageOfWorld2(334);
+const russia = percentageOfWorld2(147);
+const china = percentageOfWorld2(1409);
+
+console.log(
+  `"The population of the US is ${usa}, the population of Russia is ${russia}, and the population of China is ${china}.`
+);
