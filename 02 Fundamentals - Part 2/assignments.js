@@ -17,7 +17,7 @@ const countryPortugal = describeCountry("Portugal", 10, "Lisbon");
 console.log(describeCountry("USA", 334, "Washington, D.C"));
 console.log(describeCountry("Russia", 147, "Moscow"));
 console.log(describeCountry("China", 1409, "Beijing"));
-*/
+
 
 // ******************                       //
 // FUNCTION DECLARATIONS vs. EXPRESSIONS   //
@@ -33,7 +33,7 @@ const spain = percentageOfWorld1(48);
 const portugal = percentageOfWorld1(10);
 
 console.log(
-  `"The population of England is ${england}, the population of Spain is ${spain}, and the population of Portugal is ${portugal}.`
+  `The population of England is ${england}, the population of Spain is ${spain}, and the population of Portugal is ${portugal}.`
 );
 
 // Function Expression
@@ -48,3 +48,12 @@ const china = percentageOfWorld2(1409);
 console.log(
   `"The population of the US is ${usa}, the population of Russia is ${russia}, and the population of China is ${china}.`
 );
+*/
+
+// ****************    //
+// ARROW FUNCTIONS    //
+// ****************  //
+
+const percentageOfWorld3 = (population) => (population / 7900) * 100;
+const englandPop = percentageOfWorld3(57);
+console.log(`The population of England is ${englandPop}.`);
