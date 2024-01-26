@@ -23,7 +23,7 @@ const appleOrangeJuice = fruitProcessor(2, 4);
 console.log(appleOrangeJuice);
 
 // console.log() is just a function, notice the parentheses
-*/
+
 
 // ******************                       //
 // FUNCTION DECLARATIONS vs. EXPRESSIONS   //
@@ -43,3 +43,23 @@ const calcAge2 = function (birthYear) {
 const age2 = calcAge2(1991);
 
 console.log(age1, age2);
+*/
+
+// ***************   //
+// ARROW FUNCTION   //
+// *************** //
+
+// Function keyword is not required
+// The below is example where we only require one parameter
+const calcAge3 = (birthYear) => 2037 - birthYear; // Return happens implcitly (we don't have to write the 'return' keyword for a one line function)
+const age3 = calcAge3(1991);
+console.log(age3);
+
+const yearsUntilRetirement = (birthYear, firstName) => {
+  const age = 2037 - birthYear;
+  const retirement = 65 - age;
+  return `${firstName} retires in ${retirement} years.`;
+};
+
+console.log(yearsUntlRetirement(1991, "Rhys"));
+console.log(yearsUntlRetirement(1980, "Bob"));
