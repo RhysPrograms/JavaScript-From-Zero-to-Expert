@@ -48,7 +48,7 @@ const china = percentageOfWorld2(1409);
 console.log(
   `"The population of the US is ${usa}, the population of Russia is ${russia}, and the population of China is ${china}.`
 );
-*/
+
 
 // ****************    //
 // ARROW FUNCTIONS    //
@@ -57,3 +57,22 @@ console.log(
 const percentageOfWorld3 = (population) => (population / 7900) * 100;
 const englandPop = percentageOfWorld3(57);
 console.log(`The population of England is ${englandPop}.`);
+*/
+
+// **********************                //
+// FUNCTIONS CALLING OTHER FUNCTIONS    //
+// **********************              //
+
+function percentageOfWorld1(population) {
+  return (population / 7900) * 100;
+}
+
+function describePopulation(country, population) {
+  const percentage = percentageOfWorld1(population);
+  const description = `${country} has ${population} million people, which is about ${percentage}% of the world's population.`;
+  return description;
+}
+
+console.log(describePopulation("England", 57));
+console.log(describePopulation("USA", 334));
+console.log(describePopulation("Russia", 147));
