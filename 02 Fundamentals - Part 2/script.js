@@ -15,7 +15,7 @@ function fruitProcessor(apples, oranges) {
   const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
   return juice;
 }
-const appleJuice = fruitProcessor(5, 0); // Arguments //
+const appleJuice = fruitProcessor(5, 0); // Arguments
 console.log(appleJuice);
 console.log(fruitProcessor(5, 0));
 
@@ -23,7 +23,6 @@ const appleOrangeJuice = fruitProcessor(2, 4);
 console.log(appleOrangeJuice);
 
 // console.log() is just a function, notice the parentheses
-
 
 // ******************                       //
 // FUNCTION DECLARATIONS vs. EXPRESSIONS   //
@@ -43,7 +42,6 @@ const calcAge2 = function (birthYear) {
 const age2 = calcAge2(1991);
 
 console.log(age1, age2);
-*/
 
 // ***************   //
 // ARROW FUNCTION   //
@@ -63,3 +61,22 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 
 console.log(yearsUntlRetirement(1991, "Rhys"));
 console.log(yearsUntlRetirement(1980, "Bob"));
+*/
+
+// ***************                      //
+// FUNCTIONS CALLING OTHER FUNCTIONS   //
+// ***************                    //
+
+function cutFruitPieces(fruit) {
+  return fruit * 4;
+}
+
+function fruitProcessor(apples, oranges) {
+  const applePieces = cutFruitPieces(apples);
+  const orangePieces = cutFruitPieces(oranges);
+
+  const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange.`;
+  return juice;
+}
+
+console.log(fruitProcessor(2, 3));
