@@ -134,7 +134,7 @@ switch (language) {
   default:
     console.log("Great language too 😊");
 }
-*/
+
 
 // ******************                      //
 // The Conditional (Ternary) Operator     //
@@ -150,3 +150,4 @@ console.log(
       : "population is below average"
   }`
 );
+*/
