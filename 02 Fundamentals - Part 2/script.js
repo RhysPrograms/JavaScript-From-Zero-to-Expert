@@ -133,7 +133,7 @@ function checkWinner(avgDolphins, avgKoalas) {
 }
 
 checkWinner(scoreDolphins, scoreKoalas);
-*/
+
 
 // ************    //
 // ARRAYS         //
@@ -185,3 +185,34 @@ const ages = [
   calcAge(years[years.length - 1]),
 ];
 console.log(ages);
+*/
+
+// ************                        //
+// ARRAY OPERATIONS (METHODS)         //
+// ************                      //
+
+// Add Elements
+const friends = ["Michael", "Steven", "Peter"];
+const newLength = friends.push("Jay");
+console.log(friends); // "Michael", "Steven", "Peter", "Jay"
+console.log(newLength); // 4
+
+friends.unshift("John");
+console.log(friends); // "John", "Michael", "Steven", "Peter", "Jay"
+
+// Remove Elements
+friends.pop(); // Removes last Element
+const popped = friends.pop();
+console.log(popped); // "Peter"
+console.log(friends); // "John", "Michael", "Steven", "Peter"
+
+friends.shift(); // Removes first Element
+console.log(friends);
+
+console.log(friends.indexOf("Steven")); // 1
+console.log(friends.indexOf("Bob")); // -1 (Doesn't Exist)
+
+friends.push(23);
+console.log(friends.includes("Steven")); // True
+console.log(friends.includes("Bob")); // False
+console.log(friends.includes("23")); // False
