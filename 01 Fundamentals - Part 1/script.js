@@ -389,7 +389,7 @@ console.log(drink);
 // }
 
 console.log(`I like to drink ${age >= 18 ? "Wine 🍷" : "Water 🌊"}`);
-*/
+
 
 // ******************   //
 // CHALLENGE #4         //
@@ -431,3 +431,4 @@ if ((tip3 = bill3 >= 50 && bill3 <= 300)) {
       bill3 * 0.2)}, and the total value is ${bill3 + tip3}`
   );
 }
+*/

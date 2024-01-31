@@ -30,10 +30,12 @@ console.log(appleOrangeJuice);
 
 // Function Declaration
 // const age1 = calcAge1(1991); // We CAN call function declarations prior to them being defined
+
 function calcAge1(birthYear) {
   return 2037 - birthYear;
 }
-const age1 = calcAge1(1991); // We CAN call function declarations prior to them being defined
+
+const age1 = calcAge1(1991); // Or we can define them after
 
 // Function Expression (Function without a name, or an Anonymous Function)
 const calcAge2 = function (birthYear) {
@@ -103,12 +105,17 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 
 console.log(yearsUntilRetirement(1998, "Rhys"));
 console.log(yearsUnhtilRetirement(1950, "Steve"));
-*/
+
 // ************    //
 // CHALLENGE #1   //
 // ************  //
 
 const calcAverage = (a, b, c) => (a + b + c) / 3;
+
+// Alternative to an arrow function
+const calcAverage = function (a, b, c) {
+    return (a + b + c) / 3;
+}
 
 let scoreDolphins = calcAverage(44, 23, 71);
 let scoreKoalas = calcAverage(65, 54, 49);
@@ -126,3 +133,55 @@ function checkWinner(avgDolphins, avgKoalas) {
 }
 
 checkWinner(scoreDolphins, scoreKoalas);
+*/
+
+// ************    //
+// ARRAYS         //
+// ************  //
+
+// Even though we declare the friends variable as 'const', Arrays are not a Primitive Value, therefore we are able to mutate the value.
+
+const friend1 = "Michael";
+const friend2 = "Steven";
+const friend3 = "Peter";
+
+const friends = ["Michael", "Steven", "Peter"];
+console.log(friends);
+
+const yearsTest = new Array(1991, 1984, 2008, 2020);
+
+console.log(friends[0]); // Michael
+console.log(friends[2]); // Peter
+
+console.log(friends.length); // 3
+console.log(friends);
+console.log(friends[friends.length - 1]); // Retrieves the last element of an Array (Peter)
+
+// Mutating the Array
+// Even though we declare the friends variable as 'const', Arrays are not a Primitive Value, therefore we are able to mutate the value. We cannot however replace the entire Array (see line 164)
+friends[2] = "Jay";
+console.log(friends); // Michael", "Steven", "Jay"
+// friends = ["Bob", "Alice"];
+
+const firstName = "Jonas";
+const jonas = [firstName, "Schmedtmann", 2037 - 1991, "Teacher", friends];
+console.log(jonas);
+console.log(jonas.length);
+
+// Exercise
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
+};
+const years = [1990, 1967, 2002, 2010, 2018];
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.Length - 1]);
+console.log(age1, age2, age3);
+
+const ages = [
+  calcAge(years[0]),
+  calcAge(years[1]),
+  calcAge(years[years.length - 1]),
+];
+console.log(ages);
