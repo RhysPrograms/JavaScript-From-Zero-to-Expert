@@ -76,7 +76,7 @@ function describePopulation(country, population) {
 console.log(describePopulation("England", 57));
 console.log(describePopulation("USA", 334));
 console.log(describePopulation("Russia", 147));
-*/
+
 // **********************    //
 // INTRODUCTION TO ARRAYS   //
 // **********************  //
@@ -95,3 +95,19 @@ const percentages = [
   percentageOfWorld1(populations[3]),
 ];
 console.log(percentages);
+
+*/
+// **********************              //
+// BASIC ARRAY OPERATIONS (METHODS)   //
+// **********************            //
+
+const neighbours = ["Belgium", "Spain", "Germany"];
+neighbours.push("Utopia");
+neighbours.pop("Utopia");
+
+if (neighbours.includes !== "Germany") {
+  console.log("Probably not a central European country :D");
+}
+
+neighbours[neighbours.indexOf("Belgium")] = ["Luxembourg"];
+console.log(neighbours);
