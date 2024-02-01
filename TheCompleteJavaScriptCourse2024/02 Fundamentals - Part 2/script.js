@@ -134,7 +134,6 @@ function checkWinner(avgDolphins, avgKoalas) {
 
 checkWinner(scoreDolphins, scoreKoalas);
 
-
 // ************    //
 // ARRAYS         //
 // ************  //
@@ -185,7 +184,6 @@ const ages = [
   calcAge(years[years.length - 1]),
 ];
 console.log(ages);
-*/
 
 // ************                        //
 // ARRAY OPERATIONS (METHODS)         //
@@ -216,3 +214,7 @@ friends.push(23);
 console.log(friends.includes("Steven")); // True
 console.log(friends.includes("Bob")); // False
 console.log(friends.includes("23")); // False
+*/
+// ************         //
+// CHALLENGE #2        //
+// ************       //

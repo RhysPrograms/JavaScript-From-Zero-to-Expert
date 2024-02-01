@@ -286,7 +286,6 @@ if (favourite === 23) {
 
 if (favourite !== 23) console.log("Why not 23?");
 
-
 // ******************    //
 // LOGICAL OPERATORS    //
 // ******************* //
@@ -308,7 +307,6 @@ if (hasDriversLicense && hasGoodVision && isTired) {
   console.log("Someone else should drive!");
 }
 
-
 // ******************    //
 // CHALLENGE #3         //
 // ******************  //
@@ -323,7 +321,6 @@ if (scoreDolphins > scoreKoalas) {
 } else {
   console.log("Koalas win the trophy");
 }
-
 
 // ******************            //
 // THE SWITCH STATEMENT         //
@@ -389,7 +386,6 @@ console.log(drink);
 // }
 
 console.log(`I like to drink ${age >= 18 ? "Wine 🍷" : "Water 🌊"}`);
-
 
 // ******************   //
 // CHALLENGE #4         //
