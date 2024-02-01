@@ -57,7 +57,7 @@ console.log(
 const percentageOfWorld3 = (population) => (population / 7900) * 100;
 const englandPop = percentageOfWorld3(57);
 console.log(`The population of England is ${englandPop}.`);
-*/
+
 
 // **********************                //
 // FUNCTIONS CALLING OTHER FUNCTIONS    //
@@ -76,3 +76,22 @@ function describePopulation(country, population) {
 console.log(describePopulation("England", 57));
 console.log(describePopulation("USA", 334));
 console.log(describePopulation("Russia", 147));
+*/
+// **********************    //
+// INTRODUCTION TO ARRAYS   //
+// **********************  //
+
+function percentageOfWorld1(population) {
+  return (population / 7900) * 100;
+}
+
+const populations = [57, 334, 147, 10];
+console.log(populations.length === 4);
+
+const percentages = [
+  percentageOfWorld1(populations[0]),
+  percentageOfWorld1(populations[1]),
+  percentageOfWorld1(populations[2]),
+  percentageOfWorld1(populations[3]),
+];
+console.log(percentages);
