@@ -105,7 +105,7 @@ const neighbours = ["Belgium", "Spain", "Germany"];
 neighbours.push("Utopia");
 neighbours.pop("Utopia");
 
-if (neighbours.includes !== "Germany") {
+if (!neighbours.includes("Germany")) {
   console.log("Probably not a central European country :D");
 }
 
