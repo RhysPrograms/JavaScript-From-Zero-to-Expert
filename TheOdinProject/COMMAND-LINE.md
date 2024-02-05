@@ -68,3 +68,34 @@ The -i (interactive) option will prompt before removal (use Y to confirm deletio
 1. The Asterisk (*): The (*) wildcard represents any number of unknown characters. This is useful when searching for documents or files but only remembering a part of its name.
 2. The Question Mark (?): The (?) wildcard represents only one unknown character. This is useful when you have a list of similarly named files and unsure of a few characters.
 3. The Bracketed Characters ([ ]): The ([ ]) wildcard – the 3rd bracket and not the 1st bracket – is used to match any occurrences of characters defined inside the brackets. This option is handy when dealing with uppercase and lowercase files, as we will see later.
+
+### Pipes and Filters
+
+`$ cat`
+Cat is short for concatenate. This command displays the contents of one or more files without having to open the file for editing. It has the disadvantage that it always dumps the whole file onto your screen. More useful in practice is the command less (e.g. less lengths.txt). This displays a screenful of the file, and then stops. You can go forward one screenful by pressing the spacebar, or back one by pressing b. Press q to quit.
+
+`$ sort -n lengths.txt`
+- sort command to sort the contents of the lengths.txt file.
+- -n option specifies a numerical rather than an alphanumerical sort.
+
+Using -n 1 with head tells it that we only want the first line of the file; -n 20 would get the first 20, and so on. 
+
+`$ sort -n lengths.txt > sorted-lengths.txt`
+We can put the sorted list of lines in another temporary file called sorted-lengths.txt by putting > sorted-lengths.txt after the command, just as we used > lengths.txt to put the output of wc (word-count) into lengths.txt. 
+
+`$ echo hello >> testfile02.txt`
+We see from the second example that the >> operator also writes ‘hello’ to a file (in this case testfile02.txt), but appends the string to the file if it already exists (i.e. when we run it for the second time).
+
+`$ head -n 1 sorted-lengths.txt`
+Using -n 1 with head tells it that we only want the first line of the file; -n 20 would get the first 20, and so on. 
+
+`$ tail -n sorted-lengths.txt`
+tail is similar, but prints lines from the end of a file instead.
+
+`$ |`
+The vertical bar, |, between the two commands is called a pipe. It tells the shell that we want to use the output of the command on the left as the input to the command on the right. 
+
+`$ wc -l *.pdb | sort -n | head -n 1`
+Nothing prevents us from chaining pipes consecutively. We can for example send the output of wc directly to sort, and then send the resulting output to head. This removes the need for any intermediate files.
+
+a filter is a program like wc or sort that transforms a stream of input into a stream of output. Almost all of the standard Unix tools can work this way. Unless told to do otherwise, they read from standard input, do something with what they’ve read, and write to standard output.
