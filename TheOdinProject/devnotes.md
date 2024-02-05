@@ -32,3 +32,39 @@ Another shortcut is the - (dash) character. cd will translate - into the previou
 When options exist as both short and long options:
     Use the short option when typing commands directly into the shell to minimize keystrokes and get your task done faster.
     Use the long option in scripts to provide clarity. It will be read many times and typed once.
+
+`$ .`
+A period (.) represents the current directory., You see it in directory listings if you use the -all option with ls.
+
+`$ ..`
+The double period or "double-dot" (..) represents the parent directory of your current one. You can use this to move up one level in the directory tree.
+
+### Working with Files & Directories
+
+`$ touch my_file.txt`
+This will create an empty file if the file doesn’t exist.
+
+1. Don’t use spaces.
+Spaces can make a name more meaningful, but since spaces are used to separate arguments on the command line it is better to avoid them in names of files and directories. You can use - or _ instead (e.g. north-pacific-gyre/ rather than north pacific gyre/). 
+
+2. Don't begin the name with - (dash)
+Commands treat names starting with - as options.
+
+3. Stick with letters, numbers, . (period or ‘full stop’), - (dash) and _ (underscore).
+
+`$ rm [OPTION] [FILE]`
+rm stands for remove here. 
+
+`$ mv thesis/draft.txt thesis/quotes.txt`
+The first argument tells mv what we’re ‘moving’, while the second is where it’s to go. In this case, we’re moving thesis/draft.txt to thesis/quotes.txt, which has the same effect as renaming the file. By default, mv will not ask for confirmation before overwriting files. However, an additional option, mv -i (or mv --interactive), will cause mv to request such confirmation.
+
+`$ cp quotes.txt thesis/quotations.txt`
+The cp command works very much like mv, except it copies a file instead of moving it. 
+
+`$ rm -i thesis_backup/quotations.txt`
+The -i (interactive) option will prompt before removal (use Y to confirm deletion or N to keep the file). The Unix shell doesn’t have a trash bin, so all the files removed will disappear forever. By using the -i option, we have the chance to check that we are deleting only the files that we want to remove. rm by default only works on files, not directories. rm can remove a directory and all its contents if we use the recursive option -r, and it will do so without any confirmation prompts
+
+
+1. The Asterisk (*): The (*) wildcard represents any number of unknown characters. This is useful when searching for documents or files but only remembering a part of its name.
+2. The Question Mark (?): The (?) wildcard represents only one unknown character. This is useful when you have a list of similarly named files and unsure of a few characters.
+3. The Bracketed Characters ([ ]): The ([ ]) wildcard – the 3rd bracket and not the 1st bracket – is used to match any occurrences of characters defined inside the brackets. This option is handy when dealing with uppercase and lowercase files, as we will see later.
