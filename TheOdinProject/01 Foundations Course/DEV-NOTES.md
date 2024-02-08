@@ -1,11 +1,19 @@
+### Git & GitHub
+
 Git works on your local machine, whereas GitHub is a remote storage facility on the web for all your coding projects. 
+
+A good commit message will explain the why behind your changes. In other words, a commit message describes what problem your changes solve and how it solves them.(Describe the problem your commit solves and how.)
+
+- Use an active voice: “Fix card generator”.
+- Avoid using vague commit messages such as “saved” or “updated”.
+
+### HTML
 
 `<p>some text content</p>`
 - `<p>` is the opening tag
 - `some text content` represents content wrapped within the opening and closing tags
 - `</p>` is the closing tag
 
-### HTML
 Some HTML elements do not have a closing tag. These elements just have a single tag, like: `<br>` or `<img>`. They are known as void elements because they are void of any content, there is nothing inside of them. No closing tag means they can’t wrap content like other tags do.
 
 Just as in human relationships, HTML parent elements can have many children. Elements at the same level of nesting are considered to be siblings.
