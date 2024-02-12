@@ -32,3 +32,8 @@ Links to pages on other websites on the internet are called absolute links. A ty
 Links to other pages within our own website are called relative links. Relative links do not include the domain name, since it is another page on the same site, it assumes the domain name will be the same as the page we created the link on.
 
 By adding ./ you are specifying to your code that it should start looking for the file/directory relative to the current directory. To go to the parent directory we need to use two dots in the relative filepath like this: ../
+
+### Viewing your Project on the Web
+If you want to show your work (the project) to others, or submit a solution below, you will need to publish your site so that others can access it from the web, rather than just on your local machine. The good news is that if you have your project on GitHub (as described above), doing this is straightforward.
+
+GitHub allows you to publish web projects directly from a GitHub repository. Doing this will allow you to access your project from `your-github-username.github.io/your-github-repo-name.`
