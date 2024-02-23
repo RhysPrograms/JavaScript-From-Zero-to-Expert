@@ -147,3 +147,28 @@ body {
   width: 150px;
   margin-bottom: 24px;
 }
+
+/* *********** */
+/* SECTION THREE */
+/* *********** */
+
+.third-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e7eb;
+  color: #1f2937;
+  height: 12.8rem;
+  padding: 9.6rem 9.6rem;
+}
+
+.quote {
+  display: flex;
+  flex-wrap: wrap;
+  width: 750px;
+}
+
+.author-quote {
+  position: relative;
+  bottom: -25px;
+}
