@@ -203,3 +203,17 @@ body {
   margin-top: 12.5px;
   height: 25px;
 }
+
+/* ****** */
+/* FOOTER */
+/* ****** */
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #1f2937;
+  color: #f9faf8;
+  height: 4.8rem;
+  padding: 1.8rem 1.8rem;
+}
