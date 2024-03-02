@@ -12,3 +12,9 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 console.log(capitalizeFirstLetter("rhys"));
+
+function lastLetter(myString) {
+  let stringLength = myString.length;
+  return myString.charAt(stringLength - 1);
+}
+console.log(lastLetter("rhys"));
