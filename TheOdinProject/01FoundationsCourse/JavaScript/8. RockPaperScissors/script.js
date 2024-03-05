@@ -8,7 +8,7 @@ function getComputerChoice(rock, paper, scissors) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
-function playRound() {
+function playRound(computerSelection, playerSelection) {
   let computerSelection = getComputerChoice();
   let playerSelection = window.prompt("Rock, Paper, or Scissors?:");
 
