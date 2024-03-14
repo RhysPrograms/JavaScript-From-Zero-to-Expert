@@ -1,6 +1,8 @@
-const sumAll = function() {
-
+const sumAll = function (num1, num2) {
+  for (let x = num1; x <= num2; x++) {
+    sum += x;
+  }
+  return sum;
 };
 
-// Do not edit below this line
 module.exports = sumAll;
