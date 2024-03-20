@@ -35,6 +35,17 @@
       let dateAndTime = () => {
         return new Date();
       };
+
+      // 5.3
+      function makeWrapper(prefix, suffix) {
+        return (str) => `${prefix}${str}${suffix}`;
+      }
+
+      let bracketWrapper = makeWrapper("[", "]");
+      console.log(bracketWrapper("Bracket me!"));
+
+      let bracesWrapper = makeWrapper("{", "}");
+      console.log(bracesWrapper("Brace Me!"));
     </script>
   </body>
 </html>
