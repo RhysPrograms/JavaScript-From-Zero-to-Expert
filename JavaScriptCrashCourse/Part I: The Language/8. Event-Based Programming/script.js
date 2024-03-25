@@ -43,6 +43,11 @@ let currentX = 0;
 let currentY = 0;
 
 document.querySelector("html").addEventListener("keypress", (e) => {
+  if (e.repeat) {
+    // Ignore repeat key downs
+    return;
+  }
+
   if (e.key == "w") {
     currentY -= 5;
   } else if (e.key == "a") {
