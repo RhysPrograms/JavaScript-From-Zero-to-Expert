@@ -35,6 +35,6 @@ document.querySelector("html").addEventListener("mousemove", (e) => {
 let box = document.querySelector("#box");
 
 document.querySelector("html").addEventListener("mousemove", (e) => {
-  box.style.left = e.clientX + "px";
-  box.style.top = e.clientY + "px";
+  box.style.left = e.clientX * 2 + "px";
+  box.style.top = e.clientY + 50 + "px";
 });
