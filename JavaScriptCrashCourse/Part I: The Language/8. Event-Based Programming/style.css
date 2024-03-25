@@ -5,3 +5,12 @@ li {
 li:hover {
   text-decoration: underline;
 }
+
+#box {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 10px;
+  height: 10px;
+  background-color: hotpink;
+}
