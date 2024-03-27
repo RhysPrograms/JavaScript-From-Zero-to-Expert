@@ -28,6 +28,16 @@ ctx.strokeStyle = "blue";
 ctx.strokeRect(50, 50, 120, 20);
 
 // 9,3
+ctx.lineWidth = 2;
+
+let colors = ["red", "orange", "yelow", "green", "blue"];
+
+for (let i = 0; i < colors.length; i++) {
+  ctx.strokeStyle = colors[i];
+  let offset = i * 10;
+
+  ctx.strokeRect(10 + offset, 10 + offset, 200 - offset * 2, 100 - offset * 2);
+}
 
 //
 
