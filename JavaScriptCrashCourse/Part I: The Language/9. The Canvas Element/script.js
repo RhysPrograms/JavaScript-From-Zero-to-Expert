@@ -38,7 +38,6 @@ for (let i = 0; i < colors.length; i++) {
 
   ctx.strokeRect(10 + offset, 10 + offset, 200 - offset * 2, 100 - offset * 2);
 }
-
 //
 
 // Drawing a Triangle
@@ -55,3 +54,37 @@ ctx.fillStyle = "green";
 ctx.beginPath();
 ctx.arc(150, 100, 50, 0, Math.PI * 2, false);
 ctx.fill();
+
+// 9.6
+let x = 0;
+let y = 0;
+
+let width = canvas.width;
+let height = canvas.height;
+
+function drawCircle(x, y) {
+  ctx.fillStyle = "rgb(0, 128, 255)";
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2, false);
+  ctx.fill();
+}
+
+function update() {
+  x += 1;
+  x %= width;
+  y += 1;
+  y %= height;
+}
+
+function draw() {
+  ctx.clearRect(0, 0, width, height);
+  drawCircle(x, y);
+  // alternative approach:
+  drawCircle(x % width, y % height);
+}
+
+setInterval(() => {
+  update();
+  draw();
+}, 10);
+//
