@@ -5,6 +5,9 @@ let width = canvas.width;
 let height = canvas.height;
 
 let opacity = 1;
+let red = 0;
+let green = 255;
+let blue = 0;
 
 function drawCircle(x, y) {
   ctx.fillStyle = `rgba(0, 255, 0, ${opacity})`;
@@ -26,7 +29,17 @@ document.querySelector("#opacity").addEventListener("change", (e) => {
 });
 
 // 9.4
+document.querySelector("#red").addEventListener("change", (e) => {
+  red = e.target.value;
+});
 
+document.querySelector("#green").addEventListener("change", (e) => {
+  green = e.target.value;
+});
+
+document.querySelector("#blue").addEventListener("change", (e) => {
+  blue = e.target.value;
+});
 //
 
 // 9.5
