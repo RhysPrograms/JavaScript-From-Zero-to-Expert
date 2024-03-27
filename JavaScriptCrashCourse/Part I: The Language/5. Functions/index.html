@@ -1,0 +1,51 @@
+<html>
+  <body>
+    <script>
+      // 5.1 returning a Value
+      function sayHello(name) {
+        return `Hello, ${name}.`;
+      }
+
+      let greeting = sayHello("Rhys");
+      let loudGreeting = sayHello("Rhys".toUpperCase);
+      console.log(loudGreeting);
+
+      // 5.2 function Styles
+      // A function that takes number from 0 to 5 and returns the English word for that number.
+      // For example, 1 should return "one". Hint: use an array to define the mapping from numbers to strings
+      function numberToWord(number) {
+        const words = ["Zero", "One", "Two", "Three", "Four", "Five"];
+        if (number >= 0 && number <= 5) {
+          return words[number];
+        } else {
+          return "Number out of range";
+        }
+      }
+
+      // A function with no parameters that prints how many times it's been called. Hint: define a variable
+      // outside of the function to keep track of the number of calls.
+      let calls = 0;
+      let callCount = function () {
+        calls++;
+        console.log(`The function has been called ${callCount} times.`);
+      };
+
+      // A function that prints the current date and time. Hint: you can get the current date and time with
+      // new Date()
+      let dateAndTime = () => {
+        return new Date();
+      };
+
+      // 5.3
+      function makeWrapper(prefix, suffix) {
+        return (str) => `${prefix}${str}${suffix}`;
+      }
+
+      let bracketWrapper = makeWrapper("[", "]");
+      console.log(bracketWrapper("Bracket me!"));
+
+      let bracesWrapper = makeWrapper("{", "}");
+      console.log(bracesWrapper("Brace Me!"));
+    </script>
+  </body>
+</html>

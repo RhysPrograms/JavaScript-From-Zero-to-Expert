@@ -1,0 +1,21 @@
+h1 {
+    display: flex;
+    background-color: orangered;
+    color: white;
+    justify-content: center;
+}
+
+h2 {
+    display: flex;
+    background: black;
+    color: white;
+    justify-content: end;
+}
+
+p {
+    font-style: italic;
+}
+
+li {
+    list-style: none;
+}

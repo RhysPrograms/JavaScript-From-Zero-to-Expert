@@ -1,0 +1,41 @@
+<html>
+  <body>
+    <script>
+      // 3.1 ticTacToe Array
+      let ticTacToe = [
+        ["", "", ""][("", "", "")][("", "", "")], // 0 // 1 // 2
+      ];
+
+      ticTacToe[0][2] = "X";
+      ticTacToe[1][1] = "0";
+      ticTacToe[0][0] = "X";
+      ticTacToe[2][1] = "0";
+      ticTacToe[0][1] = "X";
+
+      // 3.2 rainbow Array
+      let rainbowColors = [];
+      rainbowColors.push = "Green";
+      rainbowColors.push = "Blue";
+      rainbowColors.push = "Indigo";
+      rainbowColors.push = "Violet";
+      rainbowColors.unshift = "Yellow";
+      rainbowColors.unshift = "Orange";
+      rainbowColors.unshift = "Red";
+
+      // 3.3 join Method
+      let kissesAndHugs = ["X", "X", "X"];
+      kissesAndHugs.join("O");
+
+      // 3.4 changing Values
+      let penny = { name: "Penny", value: 1, weight: 2.5 };
+      let nickel = { name: "Nickel", value: 5, weight: 5 };
+      let dime = { name: "Dime", value: 10, weight: 2.268 };
+      let quarter = { name: "Quarter", value: 25, weight: 5.67 };
+
+      let change = [quarter, quarter, dime, penny, penny, penny];
+
+      quarter.value = 26;
+      change[0].weight = 7.5;
+    </script>
+  </body>
+</html>

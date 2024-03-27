@@ -1,0 +1,23 @@
+h1 {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: normal;
+  color: #333;
+}
+
+/* 7.2 */
+#main-heading {
+  font-size: 48px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.highlight {
+  text-shadow: 1px 1px #aaa;
+}
+
+.highlight strong {
+  background-color: #ffa;
+  padding: 5px;
+}
