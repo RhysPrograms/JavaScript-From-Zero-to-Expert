@@ -28,17 +28,20 @@ wordList.addEventListener("click", (event) => {
   sentence.textContent += " ";
 });
 
-// document.querySelector("html").addEventListener("mousemove", (e) => {
-//   console.log(`mousemove x: ${e.clientX}, y: ${e.clientY}`);
-// });
+document.querySelector("html").addEventListener("mousemove", (e) => {
+  console.log(`mousemove x: ${e.clientX}, y: ${e.clientY}`);
+});
 
-// let box = document.querySelector("#box");
+let box = document.querySelector("#box");
 
-// document.querySelector("html").addEventListener("mousemove", (e) => {
-//   box.style.left = e.clientX * 2 + "px";
-//   box.style.top = e.clientY + 50 + "px";
-// });
+// 8.2
+document.querySelector("html").addEventListener("mousemove", (e) => {
+  box.style.left = e.clientX * 2 + "px";
+  box.style.top = e.clientY + 50 + "px";
+});
+//
 
+// 8.3
 let currentX = 0;
 let currentY = 0;
 
@@ -61,3 +64,4 @@ document.querySelector("html").addEventListener("keypress", (e) => {
   box.style.left = currentX + "px";
   box.style.top = currentY + "px";
 });
+//
