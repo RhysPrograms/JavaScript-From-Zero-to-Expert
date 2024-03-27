@@ -43,5 +43,12 @@ document.querySelector("#blue").addEventListener("change", (e) => {
 //
 
 // 9.5
+function drawSquare(x, y) {
+  ctx.fillStyle = `rgba(${red}, ${green}, ${blue}, ${opacity})`;
+  ctx.fillRect(x - 8, y - 8, 16, 16);
+}
 
+canvas.addEventListener("click", (e) => {
+  drawSquare(e.offsetX, e.offsetY);
+});
 //
