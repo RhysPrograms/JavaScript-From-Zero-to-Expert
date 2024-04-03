@@ -11,16 +11,14 @@ button.addEventListener("click", () => {
   const listButton = document.createElement("button");
 
   listItem.appendChild(listSpan);
+  listSpan.textContent = myItem;
   listItem.appendChild(listButton);
-
-  listSpan.textContent(myItem);
-  listButton.textContent("Delete");
-
+  listButton.textContent = "Delete";
   list.appendChild(listItem);
 
   listButton.addEventListener("click", () => {
     list.removeChild(listItem);
   });
 
-  input.focus;
+  input.focus();
 });
