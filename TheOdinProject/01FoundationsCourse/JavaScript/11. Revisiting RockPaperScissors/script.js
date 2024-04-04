@@ -72,17 +72,17 @@ function playRound(playerSelection) {
 
 // Function to Declare the Winner
 function declareWinner() {
-  const overallWinner = document.createElement("p");
+  const overallWinner = document.createElement("div");
   overallWinner.id = "overallWinner";
   document.body.appendChild(overallWinner);
   overallWinner.style.color = "white";
 
   if (playerScore > computerScore) {
-    overallWinner.textContent = `You Win! With a score of "${playerScore}" to the computer's "${computerScore}"`;
+    overallWinner.textContent = `You Win! With a score of ${playerScore} to the computer's ${computerScore}`;
   } else if (computerScore > playerScore) {
-    overallWinner.textContent = `You Lose! With a score of "${playerScore}" to the computer's "${computerScore}"`;
+    overallWinner.textContent = `You Lose! With a score of ${playerScore} to the computer's ${computerScore}`;
   } else {
-    overallWinner.textContent = `It's a Tie! With a score of "${playerScore}" to the computer's "${computerScore}"`;
+    overallWinner.textContent = `It's a Tie! With a score of ${playerScore} to the computer's ${computerScore}`;
   }
 
   // Disable the Buttons, after the Game
