@@ -70,27 +70,29 @@ function playRound(playerSelection) {
 
 // Function to Declare the Winner
 function declareWinner() {
+  const overallWinner = document.createElement("p");
+  overallWinner.id = "overallWinner";
+  document.body.appendChild(overallWinner);
+  overallWinner.style.color = "white";
+
   if (playerScore > computerScore) {
-    console.log(
+    overallWinner.textContent =
       "You win with a score of " +
-        playerScore +
-        " and the computer had: " +
-        computerScore
-    );
+      playerScore +
+      " and the computer had: " +
+      computerScore;
   } else if (computerScore > playerScore) {
-    console.log(
-      "You lose! The computers score was " +
-        computerScore +
-        " and you had " +
-        playerScore
-    );
+    overallWinner.textContent =
+      "You lose! The computer's score was " +
+      computerScore +
+      " and you had " +
+      playerScore;
   } else {
-    console.log(
+    overallWinner.textContent =
       "It's a tie! With an equal score of " +
-        playerScore +
-        " to " +
-        computerScore
-    );
+      playerScore +
+      " to " +
+      computerScore;
   }
 
   // Disable the Buttons, after the Game
