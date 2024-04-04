@@ -18,7 +18,7 @@ let winningScore = 5;
 
 // Getting the computers choice at random
 function getComputerChoice() {
-  const choices = ["rock", "paper", "scissors"];
+  const choices = ["Rock", "Paper", "Scissors"];
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
@@ -26,7 +26,9 @@ function getComputerChoice() {
 function playRound(playerSelection) {
   playerSelection =
     playerSelection[0].toUpperCase() + playerSelection.slice(1).toLowerCase();
+  console.log("Player selection: ", playerSelection);
   const computerSelection = getComputerChoice();
+  console.log("Computer selection: ", computerSelection);
 
   // Determine the Winner of this Round
   if (playerSelection === "Rock") {
@@ -76,23 +78,11 @@ function declareWinner() {
   overallWinner.style.color = "white";
 
   if (playerScore > computerScore) {
-    overallWinner.textContent =
-      "You win with a score of " +
-      playerScore +
-      " and the computer had: " +
-      computerScore;
+    overallWinner.textContent = `You Win! With a score of "${playerScore}" to the computer's "${computerScore}"`;
   } else if (computerScore > playerScore) {
-    overallWinner.textContent =
-      "You lose! The computer's score was " +
-      computerScore +
-      " and you had " +
-      playerScore;
+    overallWinner.textContent = `You Lose! With a score of "${playerScore}" to the computer's "${computerScore}"`;
   } else {
-    overallWinner.textContent =
-      "It's a tie! With an equal score of " +
-      playerScore +
-      " to " +
-      computerScore;
+    overallWinner.textContent = `It's a Tie! With a score of "${playerScore}" to the computer's "${computerScore}"`;
   }
 
   // Disable the Buttons, after the Game
