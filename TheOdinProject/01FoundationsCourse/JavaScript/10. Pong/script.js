@@ -80,12 +80,12 @@ function checkCollision() {
 
   if (checkPaddleCollision(ball, leftPaddle)) {
     // if Left Paddle Collision
-    xSpeed = Maths.abs(xSpeed);
+    xSpeed = Math.abs(xSpeed);
   }
 
   if (checkPaddleCollision(ball, rightPaddle)) {
     // if Right Paddle Collision
-    xSpeed = -Maths.abs(xSpeed);
+    xSpeed = -Math.abs(xSpeed);
   }
 
   if (ball.left < 0 || ball.right > width) {
