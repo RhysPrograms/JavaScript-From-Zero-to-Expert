@@ -56,6 +56,17 @@ function checkPaddleCollision(ball, paddle) {
   );
 }
 
+function adjustAngle(distanceFromTop, distanceFromBottom) {
+  if (distanceFromTop < 0) {
+    // If ball is struck near the top of the paddle, reduce ySpeed
+    ySpeed -= 0.5;
+  }
+  if (distanceFromBottom < 0) {
+    // If ball is struck near the bottom of the paddle, increase ySpeed
+    ySpeed += 0.5;
+  }
+}
+
 function checkCollision() {
   let ball = {
     left: ballPosition.x,
@@ -80,11 +91,17 @@ function checkCollision() {
 
   if (checkPaddleCollision(ball, leftPaddle)) {
     // if Left Paddle Collision
+    let distanceFromTop = ball.top - leftPaddle.top;
+    let distanceFromBottom = leftPaddle.bottom - ball.bottom;
+    adjustAngle(distanceFromTop, distanceFromBottom);
     xSpeed = Math.abs(xSpeed);
   }
 
   if (checkPaddleCollision(ball, rightPaddle)) {
     // if Right Paddle Collision
+    let distanceFromTop = ball.top - rightPaddle.top;
+    let distanceFromBottom = rightPaddle.bottom - ball.bottom;
+    adjustAngle(distanceFromTop, distanceFromBottom);
     xSpeed = -Math.abs(xSpeed);
   }
 
