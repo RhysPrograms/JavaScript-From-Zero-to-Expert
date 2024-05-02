@@ -57,12 +57,15 @@ function checkPaddleCollision(ball, paddle) {
 }
 
 function adjustAngle(distanceFromTop, distanceFromBottom) {
-  if (distanceFromTop < 0) {
+  console.log(`Top: ${distanceFromTop}, Bottom: ${distanceFromBottom}`);
+  if (distanceFromTop < 2) {
     // If ball is struck near the top of the paddle, reduce ySpeed
+    console.log(`Top Hit!`);
     ySpeed -= 0.5;
   }
-  if (distanceFromBottom < 0) {
+  if (distanceFromBottom < 2) {
     // If ball is struck near the bottom of the paddle, increase ySpeed
+    console.log(`Bottom Hit!`);
     ySpeed += 0.5;
   }
 }
@@ -119,7 +122,7 @@ function gameLoop() {
   update();
   checkCollision();
 
-  setTimeout(gameLoop, 30);
+  setTimeout(gameLoop, 20);
 }
 
 gameLoop();
