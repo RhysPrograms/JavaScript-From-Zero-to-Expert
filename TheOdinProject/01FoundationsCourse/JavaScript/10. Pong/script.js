@@ -1,3 +1,6 @@
+let game = new Game();
+game.loop();
+
 // `this` refers to the current instance of the GameView class.
 //  this.ctx, this.width, etc, are properties of the current instance of the GameView class.
 class GameView {
