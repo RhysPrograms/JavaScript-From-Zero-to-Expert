@@ -109,7 +109,6 @@ class Ball extends Entity {
 
   checkPaddleCollision(paddle, xSpeedAfterBounce) {
     let ballBox = this.boundingBox();
-    // paddle is a static property
     let paddleBox = paddle.boundingBox();
 
     // Confirm if the ball and paddle are overlapping both vertically and horizontally
@@ -144,6 +143,27 @@ class Ball extends Entity {
     // Hitting the Top or Bottom walls
     if (ballBox.top < 0 || ballBox.bottom > height) {
       this.ySpeed = -this.ySpeed;
+    }
+  }
+}
+
+class Scores {
+  constructor() {
+    this.leftScore = 0;
+    this.rightScore = 0;
+  }
+}
+
+class Computer {
+  static followBall(paddle, ball) {
+    const MAX_SPEED = 2;
+    let ballBox = ball.bouncingBox();
+    let paddleBox = paddle.bouncingBox();
+
+    if (ballBox.top < paddleBox.top) {
+      paddle.y -= MAX_SPEED;
+    } else if (ballBox.bottom > paddleBox.bottom) {
+      paddle.y += MAX_SPEED;
     }
   }
 }
