@@ -4,10 +4,16 @@ let width = canvas.width;
 let height = canvas.height;
 
 const BALL_SIZE = 5; // True Constant, all-caps style
-let ballPosition = { x: 20, y: 30 };
+let ballPosition;
 
-let xSpeed = 4;
-let ySpeed = 2;
+let xSpeed;
+let ySpeed;
+
+function initBall() {
+  ballPosition = { x: 20, y: 30 };
+  xSpeed = 4;
+  ySpeed = 2;
+}
 
 const PADDLE_WIDTH = 5;
 const PADDLE_HEIGHT = 20;
@@ -118,8 +124,14 @@ function checkCollision() {
     xSpeed = -Math.abs(xSpeed);
   }
 
-  if (ball.left < 0 || ball.right > width) {
-    xSpeed = -xSpeed;
+  if (ball.left < 0) {
+    rightScore++;
+    initBall();
+  }
+
+  if (ball.right > width) {
+    leftScore++;
+    initBall();
   }
 
   if (ball.top < 0 || ball.bottom > height) {
@@ -135,4 +147,5 @@ function gameLoop() {
   setTimeout(gameLoop, 20);
 }
 
+initBall();
 gameLoop();
