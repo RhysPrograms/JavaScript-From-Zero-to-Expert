@@ -60,3 +60,44 @@ class Entity {
     ctx.fillRect(this.x, this.y, this.width, this.height);
   }
 }
+
+class Paddle extends Entity {
+  static WIDTH = 5; // Caps as they are to be tret as constants
+  static HEIGHT = 20;
+  static OFFSET = 10;
+
+  constructor(x, y) {
+    super(x, y, Paddle.WIDTH, Paddle.HEIGHT); // Uses super to call the constructor if ots superclass (Entity)
+  }
+}
+
+class Ball extends Entity {
+  static SIZE = 5;
+
+  constructor() {
+    super(0, 0, Ball.SIZE, Ball.SIZE); // The 0's (X & Y) are just placeholders and the ball's position is handled by init()
+    this.init();
+  }
+
+  init() {
+    this.x = 20;
+    this.y = 30;
+    this.xSpeed = 4;
+    this.ySpeed = 2;
+  }
+
+  update() {
+    this.x += this.xSpeed;
+    this.y += this.ySpeed;
+  }
+
+  adjustAngle(distanceFromTop, distanceFromBottom) {
+    if (distanceFromTop < 0) {
+      // If the ball is hit near the top of the paddle, reduce the ySpeed
+      this.ySpeed -= 0.5;
+    } else if (distanceFromBottom < 0) {
+      // If the ball is hit near the bottom of the padde, increase the ySpeed
+      this.ySpeed += 0.5;
+    }
+  }
+}
