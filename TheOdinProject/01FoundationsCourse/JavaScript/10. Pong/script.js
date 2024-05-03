@@ -1,5 +1,8 @@
-let game = new Game();
-game.loop();
+// the code is executed only after the HTML content of the page is fully loaded.
+document.addEventListener("DOMContentLoaded", function () {
+  let game = new Game();
+  game.loop();
+});
 
 // `this` refers to the current instance of the GameView class.
 //  this.ctx, this.width, etc, are properties of the current instance of the GameView class.
@@ -160,8 +163,8 @@ class Scores {
 class Computer {
   static followBall(paddle, ball) {
     const MAX_SPEED = 2;
-    let ballBox = ball.bouncingBox();
-    let paddleBox = paddle.bouncingBox();
+    let ballBox = ball.boundingBox();
+    let paddleBox = paddle.boundingBox();
 
     if (ballBox.top < paddleBox.top) {
       paddle.y -= MAX_SPEED;
@@ -207,7 +210,7 @@ class Game {
       this.scores
     );
 
-    if (this.scores.leftScore > 9 || this.scores.rightScpre > 9) {
+    if (this.scores.leftScore > 4 || this.scores.rightScore > 4) {
       this.gameOver = true;
     }
   }
