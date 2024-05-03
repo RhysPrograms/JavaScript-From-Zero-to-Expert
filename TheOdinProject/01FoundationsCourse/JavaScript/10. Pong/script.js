@@ -20,6 +20,7 @@ class GameView {
   }
 
   drawScores(scores) {
+    // Fill
     this.ctx.fillStyle = "white";
     this.ctx.font = "30px monospace";
 
@@ -46,6 +47,7 @@ class Entity {
     this.height = height;
   }
 
+  // Returns an object with the left, right, top, and bottom bounds of the entity
   boundingBox() {
     return {
       left: this.x,
@@ -55,6 +57,7 @@ class Entity {
     };
   }
 
+  // Takes a drawing context and draws a white rectangle
   draw(ctx) {
     ctx.fillStyle = "white";
     ctx.fillRect(this.x, this.y, this.width, this.height);
@@ -62,12 +65,14 @@ class Entity {
 }
 
 class Paddle extends Entity {
-  static WIDTH = 5; // Caps as they are to be tret as constants
+  // Caps as they are to be tret as constants
+  static WIDTH = 5;
   static HEIGHT = 20;
   static OFFSET = 10;
 
   constructor(x, y) {
-    super(x, y, Paddle.WIDTH, Paddle.HEIGHT); // Uses super to call the constructor if ots superclass (Entity)
+    // Uses super to call the constructor of its superclass (Entity)
+    super(x, y, Paddle.WIDTH, Paddle.HEIGHT);
   }
 }
 
@@ -75,7 +80,8 @@ class Ball extends Entity {
   static SIZE = 5;
 
   constructor() {
-    super(0, 0, Ball.SIZE, Ball.SIZE); // The 0's (X & Y) are just placeholders and the ball's position is handled by init()
+    // The 0's (X & Y) are just placeholders and the ball's position is handled by init()
+    super(0, 0, Ball.SIZE, Ball.SIZE);
     this.init();
   }
 
@@ -98,6 +104,46 @@ class Ball extends Entity {
     } else if (distanceFromBottom < 0) {
       // If the ball is hit near the bottom of the padde, increase the ySpeed
       this.ySpeed += 0.5;
+    }
+  }
+
+  checkPaddleCollision(paddle, xSpeedAfterBounce) {
+    let ballBox = this.boundingBox();
+    // paddle is a static property
+    let paddleBox = paddle.boundingBox();
+
+    // Confirm if the ball and paddle are overlapping both vertically and horizontally
+    let collisionOccured =
+      ballBox.left < paddleBox.right &&
+      ballBox.right > paddleBox.left &&
+      ballBox.top < paddleBox.bottom &&
+      ballBox.bottom > paddleBox > paddleBox.top;
+
+    // if collisionOccured = true
+    if (collisionOccured) {
+      let distanceFromTop = ballBox.top - paddleBox.top;
+      let distanceFromBottom = paddleBox.bottom - ballBox.bottom;
+      this.adjustAngle(distanceFromTop, distanceFromBottom);
+      this.xSpeed = xSpeedAfterBounce;
+    }
+  }
+
+  checkWallCollision(width, height, scores) {
+    let ballBox = this.boundingBox();
+
+    // Hitting the Left wall
+    if (ballBox.left < 0) {
+      scores.rightScore++;
+      this.init();
+    }
+    // Hitting the Right wall
+    if (ballBox.right > width) {
+      scores.leftScore++;
+      this.init();
+    }
+    // Hitting the Top or Bottom walls
+    if (ballBox.top < 0 || ballBox.bottom > height) {
+      this.ySpeed = -this.ySpeed;
     }
   }
 }
