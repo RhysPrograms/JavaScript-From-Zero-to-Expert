@@ -34,14 +34,14 @@ class GameView {
     this.ctx.fillText(scores.leftScore.toString(), 50, 50);
 
     this.ctx.textAlign = "right";
-    this.ctx.fillText(scores.rightScore.toString(), -50, 50);
+    this.ctx.fillText(scores.rightScore.toString(), this.width - 50, 50);
   }
 
   drawGameOver() {
     this.ctx.fillStyle = "white";
     this.ctx.font = "30px monospace";
     this.ctx.textAlign = "center";
-    this.text.fillText("GAME OVER", this.width / 2, this.height / 2);
+    this.ctx.fillText("GAME OVER", this.width / 2, this.height / 2);
   }
 }
 
@@ -122,7 +122,7 @@ class Ball extends Entity {
       ballBox.left < paddleBox.right &&
       ballBox.right > paddleBox.left &&
       ballBox.top < paddleBox.bottom &&
-      ballBox.bottom > paddleBox > paddleBox.top;
+      ballBox.bottom > paddleBox.top;
 
     // if collisionOccured = true
     if (collisionOccured) {
